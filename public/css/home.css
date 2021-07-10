@@ -1,27 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   }
 /* ---------------------------------HEADER--------------------------------- */
 .header{
     background-color:#EAC926;
-    padding-bottom: 10px;
-    padding-left: 1rem;
+    padding-bottom: 20px;
+}
+.logo-search-compra{
+    padding: 20px 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
 .logo{
-    padding-top: 10px;
-    padding: 4px;
-    height: 60px;
-    width: 140px;
+    margin-bottom: 20px;
+    padding-right: 3%;
+    height: auto;
+    width: 40%;
 }
 .search{
+    display: flex;
+    width: 60%;
     color: #666;
-    display: inline-block;
+    margin-bottom: 20px;
+}
+input{
+    padding: 3px;
+    border: none;
+    border-start-start-radius: 3px;
+    border-end-start-radius: 3px;
+}
+.search button{
+    margin-left: 2%;
+    align-content:center;
+    padding: 3px;
+    border: none;
+    border-start-end-radius: 3px;
+    border-end-end-radius: 3px;
 }
 .compra{
+    margin: auto;
     text-align: center;
     margin-bottom: 10px;
     font-weight: 100;
 }
-.listado{
+.listado1, .listado2{
     display: none;
 }
 .burger-menu{
@@ -35,7 +66,7 @@ margin-right: auto;
 border-radius: 5px;
 }
 /* ---------------------------------MAIN--------------------------------- */
-main{
+.main{
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
@@ -56,29 +87,39 @@ article{
 article:last-child{
     margin-bottom: 0px;
 }
-.cafe{
+.article-img{
     width: 100%;
 }
 .listasin{
-    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 10px;
     border-top: 1px solid #ebebeb;
 }
-.envio{
-    color: var(--color-verde);
-    font-size: 1rem;
-    border: 1px solid var(--color-verde);
-    width: min-content;
-    padding: .8em;
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
     border-radius: 50%;
-    margin-bottom: 0;
-}
+    position: absolute;
+    right: 30px;
+    top: -15px;
+    color: #39b54a;
+   }
 .precio{
     font-size: 18px;
     margin-top: 0;
+    width: 40%;
 }
 .des{
     font-size: 16px;
     color: var(--color-verde);
+    width: 60%;
 }
 .des-1{
     font-size: 16px;
@@ -87,13 +128,12 @@ article:last-child{
     font-weight: 100;
 }
 /* ---------------------------------FOOTER--------------------------------- */
-footer{
+.footer{
     background-color: #fff;
     margin-bottom: 0cm;
 }
 .footerlist{
     font-weight: bold;
-    margin-left: 16px;
     text-align: center;
     color: var(--color--gris-oscuro);
 }
@@ -119,15 +159,76 @@ p{
     margin-left: 10px;
     padding-bottom: 10px;
     margin-bottom: 0cm;
-}
-@media (min-width:361px){
+}    
+@media (min-width:768px){
     .burger-menu{
         display: none;
     }
-    .listado{
+    .lista-2{
+        display: flex;
+        justify-content: space-between;
+        margin: 4%;
+    }
+    .listado1, .listado2{
         display: initial;
+        display: flex;
+        justify-content:flex-start;
+        width: 50%;
+    }
+    .listado2{
+        justify-content: flex-end;
+        }
+    .listado1 li, .listado2 li{
+        display: flex;
+        margin: 5px 2%;
     }
     article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .logo{
+        width: 40%;
+    }
+    .search{
+        width: 25%;
+    }
+    .compra{
+        width: 35%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    main{
+        width: 94vw;
+    }
+    h4{
+        padding-left: 2%;
+    }
+    .list-art{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 5px;
+    }
+    article{
+        width: 45%;
+        margin: 15px;
+    }
+    article:last-child{
+        margin-bottom: 15px;
+    }
+}
+@media (min-width:1024px){
+    article{
+        width: 20%;
+        justify-content: space-between;
+    }
+    .precio{
+        width: 47%;
+    }
+    .des{
+        width: 53%;
+    }
+    main section article i{
+        right: 10px;
     }
 }
